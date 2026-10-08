@@ -14,7 +14,7 @@ namespace LR__2
         private Button addTrackButton;
         private Button removeTrackButton;
         private Button searchByArtistButton;
-        private Button sortByYearButton;
+        public Button sortByYearButton; // Делаем кнопку публичной
         public MusicCollectionForm()
         {
             this.Text = "Управление музыкальной коллекцией";
