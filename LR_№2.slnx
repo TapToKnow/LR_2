@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="LR_№1/LR_№2.csproj" Id="f1f305bc-4283-4e16-bd4d-d910d59ffbbb" />
+  <Project Path="UnitTest/UnitTest.csproj" Id="c759c6b2-4044-40a4-ac08-47e5f4ae1a6e" />
 </Solution>

@@ -12,7 +12,7 @@ namespace LR__2
         public string Artist { get; set; }
         public string Title { get; set; }
         public string Genre { get; set; }
-        public int Year { get; set; }
+        public string Year { get; set; }
         public AddTrackForm()
         {
             this.Text = "Добавить трек";
@@ -79,19 +79,11 @@ namespace LR__2
             };
             okButton.Click += (sender, e) =>
             {
-                if (int.TryParse(yearTextBox.Text, out int year))
-                {
-                    Artist = artistTextBox.Text;
-                    Title = titleTextBox.Text;
-                    Genre = genreTextBox.Text;
-                    Year = year;
-                    DialogResult = DialogResult.OK;
-                    Close();
-                }
-                else
-                {
-                    MessageBox.Show("Пожалуйста, введите корректный год.");
-                }
+                Artist = artistTextBox.Text;
+                Title = titleTextBox.Text;
+                Genre = genreTextBox.Text;
+                Year = yearTextBox.Text;
+                DialogResult = DialogResult.OK;
             };
             cancelButton.Click += (sender, e) =>
             {
