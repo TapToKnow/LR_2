@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LR__2;
 
 namespace LR__2
 {
     public class MusicCollection
     {
         private List<MusicTrack> tracks = new List<MusicTrack>();
-        private ListView listView;
+        public ListView listView;
+
         public MusicCollection(ListView listView)
         {
             this.listView = listView;
@@ -71,7 +73,19 @@ track.Genre.ToString(), track.Year.ToString() }));
                 listView.Items.Add(new ListViewItem(new[] { track.Artist, track.Title,
 track.Genre.ToString(), track.Year.ToString() }));
             }
+
             MessageBox.Show("Сортировка по году выполнена.");
+        }
+
+        public bool ValidateTrack(MusicTrack track)
+        {
+            if (string.IsNullOrWhiteSpace(track.Artist) ||
+                string.IsNullOrWhiteSpace(track.Title) ||
+                string.IsNullOrWhiteSpace(track.Genre))
+                return false;
+
+            int currentYear = DateTime.Now.Year;
+            return int.Parse(track.Year) > 0 && int.Parse(track.Year) <= currentYear;
         }
     }
 }
