@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LR__1
+namespace LR__2
 {
     internal static class Program
     {

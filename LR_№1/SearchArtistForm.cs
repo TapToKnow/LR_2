@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LR__1
+namespace LR__2
 {
     public class SearchArtistForm : Form
     {
